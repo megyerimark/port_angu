@@ -402,7 +402,7 @@ body {
 //   grid-area: map;
 // }
 .contact{
-  padding: 40px;
+  padding: 30px;
   border-top: 3px solid rgba(255,255,255,0.5);
   border-left: 3px solid rgba(255,255,255,0.5);
   border-bottom: 3px solid rgba(255,255,255,0.5);
@@ -484,6 +484,9 @@ body {
 }
 .info h3{
   color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .info .infoBox div {
   display: flex;
@@ -509,6 +512,7 @@ a , p{
   color: red;
   text-decoration: none;
   font-size: 1.1em;
+
 }
 
 .info .infoBox .socials i{
@@ -539,7 +543,10 @@ a , p{
 
 .info .img img{
   border-radius: 50%;
-  width: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media(max-width:991px){
@@ -574,5 +581,12 @@ a , p{
    }
    .infoBox{
     width: 100%;
+   }
+   .info{
+    overflow: auto;
+   opacity: 0.9;
+    justify-content: center;
+    align-items: center;
+    display: flex;
    }
 }
