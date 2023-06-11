@@ -32,15 +32,147 @@
     </div>
   </div>
 
+
+
   <div class="services">
-    <div class="breakfat">
-      <h2>Reggelizni</h2>
+    <div class="firstjob">
+      <h2>TreCorte</h2>
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut laborum officia qui quisquam est rem numquam deserunt reprehenderit odio in!</p>
+      </div>
+    </div>
+    <div class="firstjob">
+      <h2>TreCorte</h2>
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut laborum officia qui quisquam est rem numquam deserunt reprehenderit odio in!</p>
+      </div>
+    </div>
+    <div class="firstjob">
+      <h2>TreCorte</h2>
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut laborum officia qui quisquam est rem numquam deserunt reprehenderit odio in!</p>
+      </div>
+    </div>
+    <div class="firstjob">
+      <h2>TreCorte</h2>
       <div class="content">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut laborum officia qui quisquam est rem numquam deserunt reprehenderit odio in!</p>
       </div>
     </div>
     </div>
-    
+
+    <!-- <div class="contact">
+      <form  [formGroup]="form" (ngSubmit)="sendmail()">
+        <input type="text" formControlName="name" placeholder="Vezetéknév" class="form-control" />
+        <input type="text" formControlName="email" placeholder="email" class="form-control" />
+        <input type="text" formControlName="subject" placeholder="tárgy" class="form-control" />
+        <input type="text" formControlName="message" placeholder="üzenet" class="form-control" />
+
+     <button type="submit">Foglalás</button>
+      </form>
+
+    </div> -->
+
+
+
+    <div class="contactUs">
+
+        <div class="title">
+          <h2>Kapcsolat</h2>
+        </div>
+        <div class="box">
+          <form [formGroup]="form" (ngSubmit)="sendmail()">
+
+         <div class="contact form">
+          <h3>Üzenet</h3>
+          <div class="formBox">
+            <div class="row50">
+              <div class="inputBox">
+                <span> Neved</span>
+                <input type="text" formControlName="name" placeholder="Neved" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="formBox">
+            <div class="row50">
+              <div class="inputBox">
+                <span> Email</span>
+                <input type="text" formControlName="email" placeholder="valami@gmail.com" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="formBox">
+            <div class="row50">
+              <div class="inputBox">
+                <span> Tárgy</span>
+                <input type="text" formControlName="subject" placeholder="Email tárgya" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="formBox">
+            <div class="row50">
+              <div class="inputBox">
+                <span> Telefonszám</span>
+                <input type="text" formControlName="tel" placeholder="+36 30 20 70 1234" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="formBox">
+            <div class="row100">
+              <div class="inputBox">
+                <span> Üzenet</span>
+              <textarea name="" id="" cols="30" rows="10"   formControlName="message" placeholder="Írj saját üzenetet">
+
+              </textarea>
+              <button type="submit" class="btn btn-outline-primary">Küldés</button>
+            </div>
+            </div>
+          </div>
+         </div>
+        </form>
+
+
+
+
+         <div class="contact info">
+          <div class="img">
+            <img src="/assets/port.jpg" alt="">
+           </div>
+          <h3>Elérhetőségek</h3>
+          <div class="infoBox">
+            <div class="">
+              <span><i class='bx bx-compass'></i></span>
+              <p>Lorem ipsum dolor sit amet. </p>
+            </div>
+            <div class="">
+              <span><i class='bx bx-envelope' ></i></span>
+            <a href="mailto:laravel.megyeri@gmail.com">laravel.megyeri@gmail.com</a>
+            </div>
+            <div class="">
+              <span><i class='bx bxl-whatsapp' ></i></span>
+              <a href="#"  (click)="openWhatsApp()">+ 36 (30) 714 0806</a>
+            </div>
+
+            <div class="socials">
+              <a href="https://github.com/megyerimark" target="_blank"><i class='bx bxl-github'    style="--i:7" ></i></a>
+              <a href="https://www.instagram.com/thetrasuomark/"><i class='bx bxl-instagram'   style="--i:8"></i></a>
+              <a href="https://www.facebook.com/markmate.megyeri/" target="_blank"><i class='bx bxl-facebook-circle'   style="--i:9"></i></a>
+              <a href="#"  (click)="openWhatsApp()"><i class='bx bxl-whatsapp' ></i></a>
+             </div>
+
+          </div>
+
+
+         </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
 
 </body>
 </html>

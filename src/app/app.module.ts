@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NavbarComponent } from './Nav/navbar/navbar.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,9 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     BrowserModule,
     AppRoutingModule,
     NgxTypedJsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

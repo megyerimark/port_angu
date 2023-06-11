@@ -1,0 +1,31 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1f242d;
+}
+
+
+footer{
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+
+}
+footer section{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* középre igazítás */
+  padding: 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  color: wheat;
+
+
+
+}
+
+
+
