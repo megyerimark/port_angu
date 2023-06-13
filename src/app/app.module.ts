@@ -8,12 +8,14 @@ import { NavbarComponent } from './Nav/navbar/navbar.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ScrollToComponent } from './scroll-to/scroll-to.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PortfolioComponent,
-    NavbarComponent
+    NavbarComponent,
+    ScrollToComponent
   ],
   imports: [
     BrowserModule,

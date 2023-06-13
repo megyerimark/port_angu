@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+
+import { Component, HostListener, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {NgxTypedJsModule} from 'ngx-typed-js';
 import Typed from 'typed.js';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SenderserviceService } from '../Email/senderservice.service';
 import Swal from 'sweetalert2';
 
@@ -16,7 +17,10 @@ import Swal from 'sweetalert2';
 })
 
 
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
+  contentLoaded: boolean = false;
+
+
 
   form!:FormGroup;
 
@@ -24,10 +28,13 @@ export class PortfolioComponent {
     private email:SenderserviceService,
    private router:Router,
     private http:HttpClient,
-    private formBuilder:FormBuilder){
+    private formBuilder:FormBuilder,
+    private route: ActivatedRoute
+    ){
 
 
     }
+
 
   downloadCV() {
     const link = document.createElement('a');
@@ -38,7 +45,7 @@ export class PortfolioComponent {
 
   ngOnInit():void {
     const type = new Typed('#change', {
-      strings: ['Frontend fejlesztő ', 'Back-end fejlesztő'],
+      strings: [' Junior Full-stack Fejlesztő vagyok'],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true
@@ -51,6 +58,18 @@ export class PortfolioComponent {
       message: ['', Validators.required],
       tel: ['', Validators.required],
     });
+
+
+
+    this.route.fragment.subscribe(fragment =>{
+      if(fragment){
+        const element = document.querySelector('#'+ fragment)
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+
+      }}
+    })
   }
   openWhatsApp() {
     const phoneNumber = '+36307140806';
@@ -60,7 +79,6 @@ export class PortfolioComponent {
   }
 
   sendmail() {
-
     let mail ={
       name: this.form.value.name,
       email: this.form.value.email,
@@ -70,26 +88,24 @@ export class PortfolioComponent {
 
     }
 
-
-
-
-
-    this.email.send(mail).subscribe({
-      next:data=>{
+    this.email.send(this.form.value).subscribe({
+      next: data => {
         Swal.fire(
           'Köszönöm a megkeresésed!',
           'Hamarosan felveszem Veled a kapcsolatot!',
           'success'
         );
         this.form.reset();
-
       },
-      error:err=>{
-       Swal.fire(
-        "Sikertelen!",
-        "Lérlek tölts ki minden mezőt!", "error"
-       )
+      error: err => {
+        console.error(err);
+        Swal.fire(
+          'Sikertelen!',
+          'Hiba történt a küldés során. Kérlek próbáld újra később!',
+          'error'
+        );
       }
-    })
+    });
   }
+
 }

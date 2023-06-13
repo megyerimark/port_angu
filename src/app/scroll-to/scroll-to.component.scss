@@ -1,0 +1,66 @@
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background: linear-gradient(45deg, #fed9b7, #00afb9);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333;
+}
+
+
+// #scrollToTopBtn {
+//   display: none;
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+//   z-index: 99;
+//   cursor: pointer;
+//   background-color: transparent;
+//   border: none;
+//   outline: none;
+// }
+
+// #scrollToTopBtn .arrow {
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   line-height: 30px;
+//   text-align: center;
+//   font-size: 20px;
+//   background-color: #555;
+//   color: white;
+//   border-radius: 50%;
+//   transition: background-color 0.3s;
+// }
+
+// #scrollToTopBtn .text {
+//   display: none;
+//   font-size: 14px;
+//   color: #555;
+//   margin-left: 8px;
+//   transition: opacity 0.3s;
+// }
+
+// #scrollToTopBtn:hover .arrow {
+//   background-color: #333;
+// }
+
+// #scrollToTopBtn.show {
+//   display: block;
+// }
+
+// #scrollToTopBtn.show .text {
+//   display: inline-block;
+//   opacity: 1;
+// }

@@ -13,7 +13,9 @@ nav{
 }
 
 nav .navbar-brand{
-  color: wheat;
+  background: linear-gradient(45deg, #fed9b7, #00afb9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
   font-weight: 600;
   font-size: 27px;
@@ -27,7 +29,9 @@ nav .navbar-brand{
 
   display: flex;
   text-decoration: none;
-  color: white;
+  background: linear-gradient(45deg, #fed9b7, #00afb9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;;
   padding: 0px 16px;
   font-weight: 600;
   transition: 0.3s all;
@@ -37,12 +41,12 @@ nav .navbar-brand{
   animation-delay: calc(.2s *var(--i));
   opacity: 0;
 }
-.nav-item a:hover{
-  color: #0ed;
-}
-.nav-item a.nav-link{
-  color: #0ed;
-}
+// .nav-item a:hover{
+//   color: #0ed;
+// }
+// .nav-item a.nav-link{
+//   color: #0ed;
+// }
 
 @keyframes slideLeft{
   0%{
